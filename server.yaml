@@ -17,7 +17,7 @@ resources:
   my_instance:
     type: OS::Nova::Server
     properties:
-      name: gubarev2
+      name: gubarev-auto-server
       image: { get_param: image }
       flavor: { get_param: flavor }
       key_name: { get_param: key_name }
