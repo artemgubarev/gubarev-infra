@@ -22,4 +22,4 @@ resources:
       flavor: { get_param: flavor }
       key_name: { get_param: key_name }
       networks:
-        - network: students  # Проверь точное имя сети в панели
+        - network: sutdents-net
