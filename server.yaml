@@ -8,7 +8,7 @@ parameters:
     default: gubarev  # Имя твоего ключа в OpenStack
   image:
     type: string
-    default: ubuntu-22.04  # Проверь точное название образа в облаке
+    default: ununtu-22.04  # Проверь точное название образа в облаке
   flavor:
     type: string
     default: m1.small
