@@ -1,1 +1,25 @@
 heat_template_version: 2018-08-31
+
+description: Heat template for creating a server in the student network.
+
+parameters:
+  key_name:
+    type: string
+    default: gubarev  # Имя твоего ключа в OpenStack
+  image:
+    type: string
+    default: ubuntu-20.04  # Проверь точное название образа в облаке
+  flavor:
+    type: string
+    default: m1.small
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      name: gubarev-auto-server
+      image: { get_param: image }
+      flavor: { get_param: flavor }
+      key_name: { get_param: key_name }
+      networks:
+        - network: students-net  # Проверь точное имя сети в панели
