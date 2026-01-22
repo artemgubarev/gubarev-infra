@@ -5,10 +5,10 @@ description: Heat template for creating a server in the student network.
 parameters:
   key_name:
     type: string
-    default: gubarev  # Имя твоего ключа в OpenStack
+    default: gubarev
   image:
     type: string
-    default: ununtu-22.04  # Проверь точное название образа в облаке
+    default: ununtu-22.04
   flavor:
     type: string
     default: m1.small
@@ -17,7 +17,7 @@ resources:
   my_instance:
     type: OS::Nova::Server
     properties:
-      name: gubarev-auto-server
+      name: gubarev-infra
       image: { get_param: image }
       flavor: { get_param: flavor }
       key_name: { get_param: key_name }
